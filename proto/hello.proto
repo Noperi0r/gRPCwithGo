@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package hello;
+
+option go_package = "main/grpc/proto;proto";
+
+service HelloService {
+  rpc Square (RequestTest) returns (ResponseTest);
+}
+
+message RequestTest {
+  int32 number = 1;
+}
+
+message ResponseTest {
+  int32 result = 1;
+}
