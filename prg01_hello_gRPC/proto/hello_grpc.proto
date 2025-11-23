@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "gRPCwithGo/prg01_hello_gRPC/proto";
+
+service MyService {
+    rpc MyFunction(MyNumber) returns (MyNumber) {}
+}
+
+message MyNumber {
+    int32 value = 1;
+}

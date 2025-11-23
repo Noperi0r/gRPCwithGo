@@ -1,4 +1,4 @@
-module main/grpc
+module gRPCwithGo
 
 go 1.25.4
 
