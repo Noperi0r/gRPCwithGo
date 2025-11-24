@@ -18,6 +18,7 @@ type server struct { // 서버 구조체(클래스 정의)
 // req *pb.MyNumber: request
 func (s *server) MyFunction(ctx context.Context, req *pb.MyNumber) (*pb.MyNumber, error) { // *pb.MyNumber, error 리턴값 두개 > 응답, 에러
 	result := MyFunc(req.Value)
+	fmt.Println("RPC Service result: ", result)
 	return &pb.MyNumber{Value: result}, nil // 리턴값 2개(&는 주소값이고 MyNumber 객체 생성, nil은 None, 에러 없음 의미)
 }
 
