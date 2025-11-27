@@ -32,12 +32,12 @@ func main() {
 		log.Fatalf("could not call: %v", err)
 	}
 
-	// Stream 메시지 받기 - 무한 루프
+	// 무한루프 stream 메시지 받기
 	for {
 		// 메시지 하나 받기
 		response, err := stream.Recv()
 
-		// 스트림 종료 확인
+		// 스트림 종료
 		if err == io.EOF {
 			fmt.Println("Stream ended.")
 			break
